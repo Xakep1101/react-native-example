@@ -3,6 +3,11 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   
+  const [fetchingData, setFetchingDataState] = React.useState(true);
+  setTimeout(() => {
+    setFetchingDataState(false);
+  }, 1000);
+
   //Home screen
   const Home = () => {
     return (
