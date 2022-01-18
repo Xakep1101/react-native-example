@@ -3,16 +3,6 @@ import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   
-  const [fetchingData, setFetchingDataState] = React.useState(true);
-  setTimeout(() => {
-    setFetchingDataState(false);
-  }, 1000);
-
-  if(fetchingData) {
-    return <Loading />
-  } else {
-    return <Home />
-  }
 
   //Home screen
   const Home = () => {
@@ -32,6 +22,17 @@ export default function App() {
         <StatusBar style="auto" />
       </View>
     );
+  }
+
+  const [fetchingData, setFetchingDataState] = React.useState(true);
+  setTimeout(() => {
+    setFetchingDataState(false);
+  }, 1000);
+
+  if(fetchingData) {
+    return <Loading />
+  } else {
+    return <Home />
   }
 }
 
