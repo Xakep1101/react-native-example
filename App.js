@@ -8,6 +8,12 @@ export default function App() {
     setFetchingDataState(false);
   }, 1000);
 
+  if(fetchingData) {
+    return <Loading />
+  } else {
+    return <Home />
+  }
+
   //Home screen
   const Home = () => {
     return (
